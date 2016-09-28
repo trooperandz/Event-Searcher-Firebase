@@ -555,7 +555,7 @@ var contentObj = {
 
 $(document).ready(function() {
     // Backstretch plugin for responsive background container image
-    $.backstretch("assets/img/chihuly-bg-02-copy.jpg");
+    $.backstretch("assets/img/flaming-lips.jpg");
 
     // If user is logged in, grab their favorties data from the db
     if(userLoggedIn) {

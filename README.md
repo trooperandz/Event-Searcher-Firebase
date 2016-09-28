@@ -1,4 +1,4 @@
-# Group Project 1: Event Searcher (eventi)
+# Event Searcher (eventi)
 
 > This app allows users to search for events in any city, with the following search criteria:  city, category, and date range.  The user not only has the ability to search for events, but may also create an account, save events to his/her own account, and view those saved events after logging in. 
 
@@ -39,6 +39,8 @@
  * User account creation and login functionality, including facebook & google login authorization
 
  * Users may save data from the app, and view their saved events after logging in
+
+ * User account data and user favorites are stored in a Firebase database
 
  * Event card sliders for visual aesthetics and app interactivity, which reveal event favorite add/edit actions
 
