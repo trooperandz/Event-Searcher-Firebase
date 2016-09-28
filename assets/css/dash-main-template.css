@@ -1,0 +1,554 @@
+/**
+ * Program: dash-main-template.css
+ * Created: 09/08/2016 by Saray Reyes, Garett Francis, Matt Holland
+ * Located: fileLocation/assets/css/style.css
+ * Purpose: Provide styling instructions for group project #1 dashboard page template - Event searcher
+ */
+
+/* Google fonts available on page...
+font-family: 'Yanone Kaffeesatz', sans-serif;
+font-family: 'Raleway', sans-serif;
+font-family: 'Josefin Sans', sans-serif;
+font-family: 'Quicksand', sans-serif;
+font-family: 'Josefin Slab', serif;
+*/
+
+/*
+Colors:
+#31C0C5 - robin egg blue
+#239095 - darker robin blue for hover
+#154D4F - darkest robin blue for click border
+#FEDC32 - daisy yellow
+#F7CF00 - dark yellow for hover
+#BFBFBF - light gray used on fonts and borders
+#717171 - dark gray modal header
+#EFEFEF - slider background color
+*/
+
+/* Apply dark navy blue background and gray text to body */
+body {
+	font-family: 'Josefin Sans', sans-serif;
+	background-color: #0A0A0A;
+	color: #BFBFBF;
+}
+
+/*Eventastic div*/
+.navbar-inverse .navbar-brand {
+	color: #FEDC32;
+	font-size: 32px;
+	padding-top: 20px;
+	background-color: #1F1F1F;
+}
+
+/*Make all paragraph text black and bold*/
+p {
+  color: black;
+  font-weight: bold;
+}
+
+/* Main program title in top left of screen */
+a.navbar-brand {
+	font-weight: 200;
+	font-size: 20px;
+}
+
+/* Nav Bar */
+#navbar {
+	background-color: #1F1F1F;
+	border-bottom: 1px solid #BFBFBF;
+ 	width: 100%;
+}
+
+/* Make input label thinner */
+label {
+	font-weight: 200;
+}
+
+/* Styling for event modal */
+.modal-title {
+	color: #FEDC32;
+}
+
+#modal-event-name {
+ 	color:  #31C0C5;
+ 	font-size: 18px;
+ 	font-weight: bold;
+}
+
+.modal-header {
+ 	background-color: #717171;
+ 	border-radius: 4px;
+}
+
+.modal-header span {
+ 	color: #FEDC32;
+}
+
+/* Styling for alert modal */
+#modal-alert-msg {
+	font-size: 25px;
+}
+
+.searchModal label {
+	font-size: 25px;
+	font-weight: bold;
+}
+
+/* Styling for search modal */
+.searchModal input, .searchModal select {
+	margin-bottom: 14px;
+}
+
+/* Dark gray background for sidebar */
+div.sidebar {
+	background-color: #1F1F1F;
+}
+
+/* Move sidebar heading down a bit, and reduce font weight */
+.nav li a.sidebar-heading {
+	padding-top: 0;
+	padding-bottom: 30px;
+	color: orange;
+	font-weight: 200;
+}
+
+/* Remove white background on li hover event */
+.nav li a:hover {
+	background: none;
+}
+
+/* Put the buttons in the middle of the sidebar, make transition effect slow */
+li {
+	text-align: center;
+	transition: .5s;
+}
+
+#dashboard-content li:hover {
+	background-color: none;
+	color: #FEDC32;
+}
+
+li h2 {
+	font-weight: 300;
+}
+
+/*Remove box and outline from the sidebar buttons*/
+.click-option {
+	background: none;
+	border: none;
+	outline: none;
+	font-size: 24px;
+	color: #BFBFBF;
+ 	transition: .5s;
+}
+
+/*Hover color for the sidebar buttons*/
+.click-option:hover {
+	color: #FEDC32;
+}
+
+/* Move input field left to make room away from edge of screen */
+input.input-generate {
+	margin-right: 5px;
+}
+
+/* Global styles for all buttons */
+.btn {
+ 	font-size: 20px;
+	border-radius: 3px;
+	background-color: #31C0C5;
+	border: none;
+	transition: .5s;
+ 	color: #fff;
+	letter-spacing: .5px;
+}
+
+.btn:hover, .btn:active, .btn:focus, .btn:active:focus {
+	color: #fff;
+	background-color: #239095;
+	outline: none;
+}
+
+.clear-btn {
+	margin-right: 10px;
+}
+
+ /*Find Events Button*/
+#find-events-btn {
+	font-size: 16px;
+	margin-right: 18px;
+}
+
+/* Styling for favorite buttons */
+.fav-button {
+	font-weight: bold;
+ 	font-size: 20px;
+	background-color: #31C0C5;
+	border: none;
+	color: #fff;
+	border-top-right-radius: 0;
+ 	border-top-left-radius: 0;
+ 	transition: .5s;
+}
+
+/* Make search icon light blue */
+.glyphicon-plus {
+	color: #FEDC32;
+}
+
+/* Styling for top right login items */
+.navButtons {
+	display: inline-block;
+}
+
+.user-login-name-display {
+	color: #FEDC32;
+	margin-right: 15px;
+	font-size: 17px;
+}
+
+.profile-img {
+	border-radius: 50%;
+	height: 40px;
+	width: auto;
+}
+
+/* Override Bootstrap panel styling. Make sure there is no margin on bottom so that fav button looks seamless as part of container */
+.panel {
+	background-color: #ECECEC;
+	height: 215px;
+	margin-bottom: 0;
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+/* Align search icon inside of input field */
+span.plus-icon {
+	margin-top: 8px;
+	padding-right: 40px;
+}
+
+/* Make sure that search icon has pointer on hover event */
+span.form-control-feedback {
+	pointer-events: visible;
+	cursor: pointer;
+}
+/*Change the color of the form boxes focus*/
+.form-control:focus {
+    border-color: #717171;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(35,144,149,.6);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(35,144,149,.6);
+}
+
+/* Parent container for each individual event box */
+.event-box {
+	margin-bottom: 30px;
+	cursor: pointer;
+}
+
+/* Give main page heading (currently h1) a lighter weight for aesthetics */
+.main-heading {
+	font-weight: 200;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+/* Give main page heading div a bottom border */
+div.page-header {
+	border-bottom: .5px solid #BFBFBF;
+	margin-bottom: 5px;
+}
+
+/* Give the main page header some bottom margin */
+.main .page-header {
+ 	margin-bottom: 30px;
+}
+
+/* Styling for set location input */
+.location-input {
+	background: rgba(204,204,204,0.1);
+	border: 1px solid #31C0C5;
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 45px;
+	color: #BFBFBF;
+}
+
+.glyphicon {
+	cursor: pointer;
+}
+
+/* Styling for location input glyphicon action arrow - place inside of set city location input */
+.location-icon {
+	position: absolute;
+	margin-top: 437px;
+	margin-left: 65px;
+	color: #FEDC32;
+}
+
+.location-input-feedback {
+	margin-top: 10px;
+	color: #31C0C5;
+}
+
+/* Give modal headings (all <h3>'s) some styling */
+h3 {
+	color: #1F1F1F;
+ 	font-weight: bold;
+}
+
+/* Styling for right-side favorites slider */
+#slider {
+ 	color: #31C0C5;
+ 	background-color: #EFEFEF;
+ 	text-align: center;
+ 	font-weight: bold;
+	list-style-type: none;
+}
+
+/* h1 text at top of slider*/
+#slider h1 {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  font-weight: 600;
+  border-bottom: 1.5px solid #31C0C5;
+  font-size: 42px;
+	letter-spacing: .5px;
+}
+
+/* Styling for the list of user generated categories*/
+.user-generated-categories {
+ color: #717171;
+ letter-spacing: .5px;
+}
+
+.user-generated-categories:hover {
+ color: #F7CF00;
+ letter-spacing: .5px;
+}
+
+/*Slider button*/
+#trigger {
+ 	outline: none;
+ 	margin-left: auto;
+ 	background-color: #FEDC32;
+ 	font-weight: bold;
+ 	font-size: 20px;
+ 	color: #717171;
+ 	width: 90;
+ 	margin-top: -10px;
+ 	margin-bottom: 30px;
+}
+
+#trigger:hover {
+ 	background: #F7CF00;
+ 	color: white;
+}
+
+/* Remove the slider fav list bullets, make text larger, and increase spacing between links */
+ul.slider-favs {
+	list-style: none;
+	padding: 0;
+}
+
+ul.slider-favs li {
+	cursor: pointer;
+}
+
+.slider-favs li {
+	font-size: 25px;
+	margin: 20px 0;
+}
+
+/*Card slider for my favorites options*/
+.card {
+ 	margin-top: 10px;
+ 	position: relative;
+ 	-webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+ 	-moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+ 	box-shadow: 4 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+ 	border-radius: 10px;
+}
+
+.card .card-content {
+ 	padding: 10px;
+}
+
+.card .card-content .card-title, .card-reveal .card-title {
+ 	font-size: 24px;
+ 	font-weight: 200;
+}
+
+.card .card-action {
+ 	padding: 20px;
+ 	border-top: 1px solid rgba(160, 160, 160, 0.2);
+}
+
+.card .card-action a {
+ 	font-size: 15px;
+ 	color: #ffab40;
+ 	text-transform: uppercase;
+ 	margin-right: 20px;
+ 	-webkit-transition: color 0.3s ease;
+ 	-moz-transition: color 0.3s ease;
+ 	-o-transition: color 0.3s ease;
+ 	-ms-transition: color 0.3s ease;
+ 	transition: color 0.3s ease;
+}
+
+.card .card-action a:hover {
+ 	color: #ffd8a6;
+ 	text-decoration: none;
+}
+
+.card .card-reveal {
+ 	padding: 20px;
+ 	position: absolute;
+ 	background-color: #FFF;
+ 	overflow-y: auto;
+ 	left:0;
+	right: 0;
+ 	bottom:0;
+ 	height: 100%;
+ 	z-index: 1;
+ 	display: none;
+ 	border-radius: 3px;
+ 	min-height: 1px;
+ 	padding-right: 15px;
+ 	padding-left: 15px;
+	margin-right: 15px;
+	margin-left: 15px;
+	color: #717171;
+}
+
+.btn-custom {
+ 	background-color: transparent;
+ 	font-size: 18px;
+}
+
+/*Card slider favorites close button*/
+.close {
+  color: #31C0C5;
+  opacity: 1;
+  text-shadow: none;
+  font-size: 40px;
+  line-height: 0;
+  transition: .5s;
+}
+
+.close:hover, .close:active, .close:focus, .close:visited {
+ 	outline: none;
+}
+
+/* Card slider favorites text at top "select a category"*/
+.card-reveal h2 {
+	margin-top: -2px;
+	font-size: 26px;
+}
+
+/* User category options box within the add favorites slider*/
+#user-category {
+	color: #717171;
+	font-weight: bold;
+	border-color: #717171;
+	letter-spacing: .5px;
+	font-size: 16px;
+	margin-top: -8px;
+}
+
+/* Button to add to user favorites category within the add favorites slider*/
+.add-to-category {
+	height: 13%;
+	color: #717171;
+	font-weight: bold;
+	background-color: #FEDC32;
+	margin-top: 8px;
+	padding: 0px;
+}
+
+.add-to-category:hover, .add-to-category:active, .add-to-category:focus, .add-to-category:active:focus {
+    color: #fff;
+    background-color: #F7CF00;
+    outline: none;
+}
+
+p.add-fav-feedback {
+	color: #31C0C5;
+	font-size: 20px;
+	text-align: center;
+	margin-top: 8px;
+}
+
+/* h2 text that says "create a new category"*/
+#create-new {
+	margin-top: 27px;
+}
+
+/* User category input box within the add favorites slider*/
+.category-input {
+	color: #717171;
+	font-weight: bold;
+	border-color: #717171;
+	margin-top: -8px;
+	font-size: 16px;
+	letter-spacing: .5px;
+}
+
+.category-input:focus {
+  border-color: #717171;
+  outline: 100;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+}
+
+/* Arrow click icon, within the user category input box within the add favorites slider*/
+.category-icon {
+  position: absolute;
+  margin-top: 180px;
+  margin-left: 225px;
+  color: #FEDC32;
+  font-size: 28px;
+}
+
+/* Media queries for small screens */
+@media (max-width: 768px) {
+	/* Make the main page heading smaller on small screens */
+	h1 {
+		font-size: 22px;
+	}
+}
+
+/* Apply medium-columns custom styling if screen is at least 768px wide, and less than 992px wide */
+@media (min-width: 768px) and (max-width: 991px) {
+	/* Only add sidebar border on larger screens */
+	.sidebar {
+		border-right: 1px solid #BFBFBF;
+	}
+
+	/* Move the spinner over half of the side content width from the middle of the page: (50 + 25/2)%, to center it */
+ 	div.spinner {
+ 		margin-left: 61.6%;
+ 	}
+
+ 	/* Make the main page heading smaller on medium screens */
+ 	h1 {
+ 		font-size: 30px;
+ 	}
+}
+
+/* Medai queries for everything except medium screens */
+@media (min-width: 992px) {
+	/* Only add sidebar border on larger screens */
+	.sidebar {
+		border-right: 1px solid #BFBFBF;
+	}
+
+	/* Move the spinner over half of the side content width from the middle of the page: (50 + 16.66666/2)%, to center it. Reduce a bit for padding */
+	div.spinner {
+		margin-left: 57.6%;
+	}
+}

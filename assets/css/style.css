@@ -1,0 +1,189 @@
+/**
+ * Program: style.css
+ * Created: 09/08/2016 by Saray Reyes, Garett Francis, Matt Holland
+ * Located: fileLocation/assets/css/style.css
+ * Purpose: Provide styling instructions for group project #1 main page template - Event searcher
+ */
+
+/* Google fonts available on page...
+font-family: 'Raleway', sans-serif;
+font-family: 'Open Sans Condensed', sans-serif;
+font-family: 'Oxygen', sans-serif;
+font-family: 'Josefin Sans', sans-serif;
+font-family: 'Quicksand', sans-serif;
+font-family: 'Questrial', sans-serif;
+font-family: 'Didact Gothic', sans-serif;
+font-family: 'Heebo', sans-serif;
+font-family: 'Bungee Hairline', cursive;
+font-family: 'Wire One', sans-serif;
+*/
+
+/* Apply Google font to main body */
+body {
+	font-family: 'Josefin Sans', sans-serif;
+}
+
+/* Global class for centering text */
+.text-center {
+	text-align: center;
+}
+
+/* Center-align incomplete bootstrap column blocks */
+.col-centered{
+    float: none;
+    margin: 0 auto;
+}
+
+/* Style the main login link */
+.login-link {
+    color: #fff;
+    margin-left: 30px;
+	font-size: 32px;
+	font-weight: 600;
+	cursor: pointer;
+	transition: .5s;
+}
+
+.login-link:hover {
+	color: #31C0C5;
+}
+
+/* Main page heading */
+.jumbotron {
+	padding-top: 5px;
+	margin-bottom: 0;
+	background: transparent;
+	color: #fff;
+}
+
+.jumbotron h1 {
+	font-weight: 500;
+	font-size: 100px;
+}
+
+/* Main page content container */
+.main {
+	margin-top: 0;
+}
+
+/* All form labels */
+label {
+  color: #fff;
+  font-weight: 800;
+  font-size: 32px;
+  letter-spacing: 1px;
+}
+
+.form-group {
+	background: rgba(0,0,0,.3);
+	height: 420px;
+	border-radius: 10px;
+}
+
+/* Style the login modal container. Override styles for main search form */
+.modal-header {
+ 	background-color: #717171;
+ 	border-radius: 4px;
+ 	border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.modal-footer {
+	background-color: #717171;
+	border-bottom-left-radius: 4px;
+	border-bottom-right-radius: 4px;
+}
+
+.alertModal .modal-footer {
+	background-color: #fff;
+}
+
+.modal-header {
+ 	color: #FEDC32;
+}
+
+#modal-alert-msg {
+	font-size: 25px;
+}
+
+.login-form {
+	background: #fff;
+	height: auto;
+}
+
+.login-form label {
+	font-weight: 200;
+	color: #000;
+}
+
+.login-form .form-control {
+	box-shadow: none;
+	border: 1px solid gray;
+	color: gray;
+}
+
+/* Global styles for all buttons, copied from dash-main-template.css */
+.btn {
+ 	font-size: 20px;
+	border-radius: 3px;
+	background-color: #31C0C5;
+	border: none;
+	transition: .5s;
+ 	color: #fff;
+	letter-spacing: .5px;
+}
+
+.btn:hover, .btn:active, .btn:focus, .btn:active:focus {
+	color: #fff;
+	background-color: #239095;
+	outline: none;
+}
+
+/* Target the login modal buttons, specifically */
+.loginModal button {
+	margin: 0 20px;
+}
+
+/* Remove form input background, and make border thinner */
+input, select {
+	/*background-color: rgba(204,204,204,0.2);*/
+	border: 1px solid #fff;
+	margin-bottom: 15px;
+}
+
+/* Styling for all form elements, override bootstrap form-control class */
+.form-control {
+	height: 45px;
+	background-color: transparent;
+	color: #fff;
+	font-weight: 500;
+	font-size: 1.5em;
+
+	/* copy of bootstrap input shadows.  Made border white and shadow gray (#ccc) */
+	border-color: #fff;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(204,204,204, .6);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(204,204,204,.6);
+}
+
+/* Styling for </p> submit container */
+/* Global styles for all buttons */
+ .search-submit {
+ 	margin-top: 20px;
+ 	cursor: pointer;
+ 	width: 100%;
+    color: #fff;
+    padding: 10px;
+    border-radius: 3px;
+    background-color: rgba(49,192,197, 0.8);
+    border: none;
+    transition: .5s;
+    font-size: 25px;
+    font-weight: bold;
+ }
+
+ .search-submit:hover, .search-submit:active, .search-submit:focus {
+ 	color: #fff;
+ 	background-color: #31C0C5;
+ 	outline: none;
+ }

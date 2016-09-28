@@ -1,0 +1,152 @@
+<!--
+ - Program: index.html
+ - Created: 09/08/2016 by Sarah Reyes, Garett Francis, Matt Holland
+ - Located: fileLocation/index.html
+ - Purpose: Provide main page display template structure for group project #1 - Event searcher
+-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Event Searcher </title>
+
+		<!-- Include meta viewport tag to give the browser instructions on how to control page dimensions/scaling -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- Latest Bootstrap compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+		<!-- Custom styles for project -->
+		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+		<link rel="stylesheet" type="text/css" href="assets/css/spinner.css">
+
+		<!-- jQuery UI styling, locally hosted -->
+		<link rel="stylesheet" href="assets/vendor/jquery-ui/jquery-ui.min.css">
+		<link rel="stylesheet" href="assets/vendor/jquery-ui/jquery-ui.structure.min.css">
+		<link rel="stylesheet" href="assets/vendor/jquery-ui/jquery-ui.theme.css">
+
+		<!-- Google fonts -->
+		<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:100|Josefin+Slab:100|Quicksand:300|Raleway:100|Yanone+Kaffeesatz:200" rel="stylesheet"></head>
+	</head>
+
+	<body>
+		<!-- Spinner container -->
+    	<div class="spinner-div"></div>
+
+    	<!-- Modal for app login -->
+    	 <div class="modal fade loginModal" tabindex="-1" role="dialog">
+    	    <div class="modal-dialog" role="document">
+    	        <div class="modal-content">
+    	            <div class="modal-header">
+    	                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"></span></button>
+    	                <h3 class="modal-title"> eventi login </h3>
+    	            </div>
+    	            <div class="modal-body">
+    	                <div class="form-group login-form">
+                        	<label> email address </label>
+                        	<input type="text" class="form-control" id="login-email">
+	
+                        	<label> password </label>
+                        	<input type="password" class="form-control" id="login-pass">
+                        </div>
+                    </div> <!-- .modal-body -->
+    	            <div class="modal-footer text-center">
+    	                <button type="button" class="btn" id="login" data-dismiss="modal"> login     </button>
+    	                <button type="button" class="btn" id="fbook" data-dismiss="modal"> facebook  </button>
+    	                <button type="button" class="btn" id="googs" data-dismiss="modal"> google    </button>
+    	                <button type="button" class="btn" id="join"  data-dismiss="modal"> sign up   </button>
+    	            </div>
+    	         </div>
+    	    </div>
+    	</div><!-- .alertModal -->
+
+    	<!-- Modal for program alerts -->
+    	 <div class="modal fade alertModal" tabindex="-1" role="dialog">
+    	    <div class="modal-dialog" role="document">
+    	        <div class="modal-content">
+    	            <div class="modal-header">
+    	                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"></span></button>
+    	                <h3 class="modal-title"> eventi </h3>
+    	            </div>
+    	            <div class="modal-body text-center">
+    	                <p id="modal-alert-msg"></p>
+    	            </div>
+    	            <div class="modal-footer">
+    	                <button type="button" class="btn btn-warning" data-dismiss="modal"> Close </button>
+    	            </div>
+    	         </div>
+    	    </div>
+    	</div><!-- /.alertModal -->
+
+		<!-- Login link -->
+		<h2 class="login-link"> login </h2>
+
+		<!-- Big Page Heading -->
+		<div class="jumbotron">
+  			<div class="container">
+    			<h1 class="text-center"> eventi </h1>
+  			</div>
+		</div>
+
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-12 col-md-6 col-lg-6 col-centered main">
+					<div class="form-group">
+						<!-- Wrap inside of col's to match padding & margin of side-by-side date fields -->
+						<div class="col-sm-12 col-md-12 col-lg-12">
+							<label> city </label>
+							<input type="text" class="form-control" id="search-city">
+
+							<label> category </label>
+							<!-- Note: value == api id requirement for that category -->
+							<select type="text" class="form-control" id="search-category">
+								<option value="">all events</option>
+								<option value="105" data-category="arts">arts</option>
+								<option value="103" data-category="music">music</option>
+								<option value="108" data-category="athletics">athletics</option>
+								<option value="110" data-category="food & drink">food & drink</option>
+								<option value="104" data-category="film & media">film & media</option>
+								<option value="102" data-category="science & technology">science & technology</option>
+							</select>
+						</div>
+						<!-- Note: date fields are side-by-side -->
+						<div class="col-sm-12 col-md-6 col-lg-6">
+							<label> start date </label>
+							<input type="text" class="form-control" id="search-date-start">
+						</div>
+
+						<div class="col-sm-12 col-md-6 col-lg-6">
+							<label> end date </label>
+							<input type="text" class="form-control" id="search-date-end">
+						</div>
+
+						<div class="col-sm-12 col-md-12 col-lg-12">
+							<p class="text-center search-submit" id="search-submit"> eventinate </p>
+						</div>
+					</div>
+				</div> <!-- .main -->
+			</div> <!-- .row -->
+		</div> <!-- .container-fluid -->
+
+		<!-- jQuery library (necessary for Bootstrap & other JavaScript plugins) -->
+   		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+   		<!-- Backstretch js plugin, for page background -->
+   		<script src="assets/js/backstretch_plugin.min.js"></script>
+
+   		<!-- Firebase database link -->
+   		<script src="https://www.gstatic.com/firebasejs/3.4.0/firebase.js"></script>
+
+   		<!-- jQuery UI script for datepicker etc. , locally hosted -->
+   		<script src="assets/vendor/jquery-ui/jquery-ui.min.js"></script>
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+		<!-- Moment JS library for date formatting etc -->
+    	<script src="assets/vendor/moment-js/moment.js"></script>
+
+		<!-- Custom js application code -->
+		<script src="assets/js/index-page.js"></script>
+	</body>
+</html>
